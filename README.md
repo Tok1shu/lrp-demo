@@ -45,7 +45,7 @@ A self-hosted web app for role-play chats with AI characters: a character catalo
 - A **first-launch flow**: a one-time setup code from the server log, creation of the owner and a six-step setup wizard
 
 **Interface**
-- Responsive layout with a separate mobile navigation
+- Mobile-first layout with a separate mobile navigation; can be added to the home screen as an app (web app manifest)
 - Every preference can be stored in the browser or on the server
 
 ## Screenshots
@@ -168,6 +168,22 @@ flowchart LR
 ## About the demo data
 
 Everything in the screenshots is sample data: the characters are fictional, their portraits are AI-generated, and the dialogues were written by hand. The streaming GIF is a real reply from a local model.
+
+## Why I built it
+
+I built Local RP for myself and to share with friends. While using SillyTavern, Character.AI and a few other online services I kept running into the same problems: an inconvenient UI/UX, especially on a phone, and, in my experience, paid plans that felt expensive for the quality of the models they offered. So I wanted a self-hosted web app that is pleasant to use from a phone (mobile-first, can be added to the home screen as an app), keeps settings in sync across devices and lets me choose the model myself.
+
+In my opinion, it can be more convenient to use than SillyTavern. The original project also has a per-user usage balance (billing) so that friends can use it with their own limits; it is not shown in this demo.
+
+## Plans
+
+- Localization of the interface (Ukrainian and English; it is Russian-only now)
+- More backend tests (coverage is partial at the moment) and a browser end-to-end test of the main flows
+- Lorebook / world info and an automatic chat summary to keep long role-plays within the model's context
+- Official support for local models (Ollama, vLLM) next to OpenRouter; the backend already works with any OpenAI-compatible endpoint
+- An MCP server on top of the public API, so characters can be created and edited from AI tools
+- Text-to-speech for replies
+- A health / readiness endpoint for monitoring
 
 ---
 
